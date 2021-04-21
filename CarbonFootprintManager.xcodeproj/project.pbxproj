@@ -16,6 +16,9 @@
 		5BCCD19C262FDA79006616F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCCD19A262FDA79006616F7 /* LaunchScreen.storyboard */; };
 		5BCCD1A7262FDA7A006616F7 /* CarbonFootprintManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD1A6262FDA7A006616F7 /* CarbonFootprintManagerTests.swift */; };
 		5BCCD1B2262FDA7A006616F7 /* CarbonFootprintManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD1B1262FDA7A006616F7 /* CarbonFootprintManagerUITests.swift */; };
+		5BCCD1C5262FDC2C006616F7 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD1C4262FDC2C006616F7 /* CalculatorViewController.swift */; };
+		5BCCD1CA262FDC36006616F7 /* calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD1C9262FDC36006616F7 /* calc.swift */; };
+		5BCCD1CF262FE01F006616F7 /* avoidSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD1CE262FE01F006616F7 /* avoidSpending.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		5BCCD1AD262FDA7A006616F7 /* CarbonFootprintManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbonFootprintManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCCD1B1262FDA7A006616F7 /* CarbonFootprintManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintManagerUITests.swift; sourceTree = "<group>"; };
 		5BCCD1B3262FDA7A006616F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BCCD1C4262FDC2C006616F7 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		5BCCD1C9262FDC36006616F7 /* calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calc.swift; sourceTree = "<group>"; };
+		5BCCD1CE262FE01F006616F7 /* avoidSpending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avoidSpending.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		5BCCD18B262FDA78006616F7 /* CarbonFootprintManager */ = {
 			isa = PBXGroup;
 			children = (
+				5BCCD1C2262FDC0C006616F7 /* Calculator */,
 				5BCCD18C262FDA78006616F7 /* AppDelegate.swift */,
 				5BCCD18E262FDA78006616F7 /* SceneDelegate.swift */,
 				5BCCD190262FDA78006616F7 /* ViewController.swift */,
@@ -129,6 +136,24 @@
 				5BCCD1B3262FDA7A006616F7 /* Info.plist */,
 			);
 			path = CarbonFootprintManagerUITests;
+			sourceTree = "<group>";
+		};
+		5BCCD1C2262FDC0C006616F7 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				5BCCD1C3262FDC16006616F7 /* Logic */,
+				5BCCD1C4262FDC2C006616F7 /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		5BCCD1C3262FDC16006616F7 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5BCCD1C9262FDC36006616F7 /* calc.swift */,
+				5BCCD1CE262FE01F006616F7 /* avoidSpending.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCCD1C5262FDC2C006616F7 /* CalculatorViewController.swift in Sources */,
 				5BCCD197262FDA78006616F7 /* CarbonFootprintManager.xcdatamodeld in Sources */,
 				5BCCD191262FDA78006616F7 /* ViewController.swift in Sources */,
 				5BCCD18D262FDA78006616F7 /* AppDelegate.swift in Sources */,
+				5BCCD1CA262FDC36006616F7 /* calc.swift in Sources */,
+				5BCCD1CF262FE01F006616F7 /* avoidSpending.swift in Sources */,
 				5BCCD18F262FDA78006616F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
