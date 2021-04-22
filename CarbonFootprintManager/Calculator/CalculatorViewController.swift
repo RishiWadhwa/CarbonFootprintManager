@@ -78,7 +78,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func updateCar() {
         carInt = Int(cars)
-        carLabel.text = "Number of Cars in Household: \(carInt)"
+        carLabel.text = "Number of Non-Electric Cars In Household: \(carInt)"
     }
     
     @IBAction func carStepperPressed(_ sender: Any) {

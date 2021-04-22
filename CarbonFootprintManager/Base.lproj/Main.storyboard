@@ -48,7 +48,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Uz-dD-Ak1">
                                 <rect key="frame" x="82" y="223" width="250" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Cars In Household: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQT-mK-ZgS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Non-Electric Cars In Household: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQT-mK-ZgS">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -134,18 +134,66 @@
         <!--Car Data-->
         <scene sceneID="DDG-zi-2a2">
             <objects>
-                <viewController id="KZl-Ut-ERD" sceneMemberID="viewController">
+                <viewController title="Car Data" id="KZl-Ut-ERD" customClass="CarCalcViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NvE-fh-7Jf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LIC-E5-oG3">
+                                <rect key="frame" x="50" y="288" width="314" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emissions:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBa-Ql-9Wb">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="kbY-Ey-llQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This means..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sda-0b-W4z">
+                                        <rect key="frame" x="0.0" y="110" width="314" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="vEG-JW-7EQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUb-BE-GxV">
+                                        <rect key="frame" x="0.0" y="220" width="314" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="hw6-Im-aOQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="YCM-zy-vGy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dfO-Tl-RHY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LIC-E5-oG3" firstAttribute="leading" secondItem="dfO-Tl-RHY" secondAttribute="leading" constant="50" id="FFv-Cj-4DJ"/>
+                            <constraint firstItem="LIC-E5-oG3" firstAttribute="centerY" secondItem="NvE-fh-7Jf" secondAttribute="centerY" id="SCe-Uc-LY0"/>
+                            <constraint firstItem="LIC-E5-oG3" firstAttribute="centerX" secondItem="NvE-fh-7Jf" secondAttribute="centerX" id="eV2-aE-N8q"/>
+                            <constraint firstItem="dfO-Tl-RHY" firstAttribute="trailing" secondItem="LIC-E5-oG3" secondAttribute="trailing" constant="50" id="r1z-T1-qYN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Car Data" id="wEb-7C-4Mi"/>
+                    <connections>
+                        <outlet property="costLabel" destination="IUb-BE-GxV" id="rCI-N6-XIb"/>
+                        <outlet property="emissionLabel" destination="sBa-Ql-9Wb" id="7bx-ae-fEc"/>
+                        <outlet property="treeLabel" destination="sda-0b-W4z" id="g7K-PZ-LNc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yah-fO-xxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3230" y="846"/>
+            <point key="canvasLocation" x="3228.985507246377" y="845.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ui3-KE-vCb">
@@ -245,7 +293,7 @@
             </objects>
             <point key="canvasLocation" x="2454" y="-588"/>
         </scene>
-        <!--View Controller-->
+        <!--Heating Data-->
         <scene sceneID="9qu-lK-R3f">
             <objects>
                 <viewController id="31j-20-cKA" sceneMemberID="viewController">
@@ -255,7 +303,7 @@
                         <viewLayoutGuide key="safeArea" id="BDD-hT-9Wq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jbL-mv-deN"/>
+                    <navigationItem key="navigationItem" title="Heating Data" id="jbL-mv-deN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aU8-Fk-5c4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B46820B2631118B00A34E9D /* CarCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46820A2631118B00A34E9D /* CarCalcViewController.swift */; };
 		5BCCD18D262FDA78006616F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD18C262FDA78006616F7 /* AppDelegate.swift */; };
 		5BCCD18F262FDA78006616F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD18E262FDA78006616F7 /* SceneDelegate.swift */; };
 		5BCCD191262FDA78006616F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD190262FDA78006616F7 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B46820A2631118B00A34E9D /* CarCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCalcViewController.swift; sourceTree = "<group>"; };
 		5BCCD189262FDA78006616F7 /* CarbonFootprintManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonFootprintManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCCD18C262FDA78006616F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BCCD18E262FDA78006616F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				5BCCD1C3262FDC16006616F7 /* Logic */,
 				5BCCD1C4262FDC2C006616F7 /* CalculatorViewController.swift */,
+				5B46820A2631118B00A34E9D /* CarCalcViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				5BCCD18D262FDA78006616F7 /* AppDelegate.swift in Sources */,
 				5BCCD1CA262FDC36006616F7 /* calc.swift in Sources */,
 				5BCCD1CF262FE01F006616F7 /* avoidSpending.swift in Sources */,
+				5B46820B2631118B00A34E9D /* CarCalcViewController.swift in Sources */,
 				5BCCD18F262FDA78006616F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
