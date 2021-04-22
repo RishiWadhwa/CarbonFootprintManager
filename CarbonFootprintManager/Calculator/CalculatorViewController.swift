@@ -7,6 +7,7 @@
 
 import UIKit
 
+var carCost: calc!
 class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var errLabel: UILabel!
@@ -98,7 +99,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             return
         }
         
-        calc.calc(ppl, cars, currentState)
+        carCost = calc.init(ppl, cars, currentState)
         self.performSegue(withIdentifier: "CalcCar", sender: sender)
     }
     

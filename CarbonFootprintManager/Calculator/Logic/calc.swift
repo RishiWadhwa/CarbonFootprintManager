@@ -19,7 +19,7 @@ class calc {
     
     //car cost
     static var CAR_GALLON_YEARLY = 276.0
-    static var cost_car_yearly = 0.0
+    var cost_car_yearly = 0.0
     
     //electric cost
     static var ELECTRIC_COST_YEARLY = 43.61*12
@@ -38,31 +38,31 @@ class calc {
     static var WASTE_EMISSIONS_YEARLY = 692
     
     //household variables
-    static var number_people: Double = 0
-    static var main_used = 0 // 0 - unset, 1 - electric, 2 - fuel oil, 3 - natural gas, 4 - propane
-    static var drivers_house: Double = 0
+    var number_people: Double = 0
+    var main_used = 0 // 0 - unset, 1 - electric, 2 - fuel oil, 3 - natural gas, 4 - propane
+    var drivers_house: Double = 0
     
-    static func calc(_ numPeople: Double, _ drivers: Double, _ state: String) {
+    init(_ numPeople: Double, _ drivers: Double, _ state: String) {
         number_people = numPeople
         drivers_house = drivers
         
-        let index = STATES_BY_NAME.firstIndex(of: state)
+        let index = CarbonFootprintManager.calc.STATES_BY_NAME.firstIndex(of: state)
         
-        cost_car_yearly = (COST_OF_GAS[index!] as Double) * CAR_GALLON_YEARLY
+        cost_car_yearly = (CarbonFootprintManager.calc.COST_OF_GAS[index!] as Double) * CarbonFootprintManager.calc.CAR_GALLON_YEARLY
     }
     
-    static func calcEmissionTotal() -> Double{
-        var emission_yearly: Double = CAR_EMISSION_YEARLY * drivers_house
+     func calcEmissionTotal() -> Double{
+        var emission_yearly: Double = CarbonFootprintManager.calc.CAR_EMISSION_YEARLY * drivers_house
         
         switch main_used {
         case 1:
-            emission_yearly += ELECTRIC_EMISSION_YEARLY
+            emission_yearly += CarbonFootprintManager.calc.ELECTRIC_EMISSION_YEARLY
         case 2:
-            emission_yearly += FUEL_OIL_YEARLY
+            emission_yearly += CarbonFootprintManager.calc.FUEL_OIL_YEARLY
         case 3:
-            emission_yearly += NATURAL_GAS_YEARLY
+            emission_yearly += CarbonFootprintManager.calc.NATURAL_GAS_YEARLY
         case 4:
-            emission_yearly += PROPANE_EMISSION_YEARLY
+            emission_yearly += CarbonFootprintManager.calc.PROPANE_EMISSION_YEARLY
         default:
             emission_yearly = 0.0
         }
@@ -70,18 +70,18 @@ class calc {
         return emission_yearly
     }
     
-    static func costTotal() -> Double{
+    func costTotal() -> Double{
         var cost_yearly: Double = cost_car_yearly * drivers_house
         
         switch main_used {
         case 1:
-            cost_yearly += ELECTRIC_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.ELECTRIC_COST_YEARLY
         case 2:
-            cost_yearly += FUEL_OIL_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.FUEL_OIL_COST_YEARLY
         case 3:
-            cost_yearly += NATURAL_GAS_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.NATURAL_GAS_COST_YEARLY
         case 4:
-            cost_yearly += PROPANE_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.PROPANE_COST_YEARLY
         default:
             cost_yearly = 0.0
         }

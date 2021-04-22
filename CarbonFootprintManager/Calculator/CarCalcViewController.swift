@@ -13,8 +13,8 @@ class CarCalcViewController: UIViewController {
     @IBOutlet weak var treeLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     
-    var cost_of_car = calc.cost_car_yearly
-    var emissions = calc.CAR_EMISSION_YEARLY
+    var cost_of_car = carCost.cost_car_yearly
+    var emissions = calc.CAR_EMISSION_YEARLY * carCost.drivers_house
     
     override func viewDidLoad() {
         super.viewDidLoad()
