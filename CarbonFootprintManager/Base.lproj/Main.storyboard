@@ -23,18 +23,6 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="ENL-f1-fTg"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnx-q8-Cg1">
-                                <rect key="frame" x="82" y="713" width="250" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="hmh-a5-HeY"/>
-                                    <constraint firstAttribute="height" constant="50" id="qWW-YA-ywh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="calcVal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4PX-Fv-CHd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in all forms!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-d9-ak7">
                                 <rect key="frame" x="82" y="608" width="250" height="75"/>
                                 <constraints>
@@ -95,6 +83,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnx-q8-Cg1">
+                                <rect key="frame" x="82" y="713" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="hmh-a5-HeY"/>
+                                    <constraint firstAttribute="height" constant="50" id="qWW-YA-ywh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calcVal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4PX-Fv-CHd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="846"/>
+            <point key="canvasLocation" x="2259" y="846"/>
         </scene>
         <!--Car Data-->
         <scene sceneID="DDG-zi-2a2">
@@ -220,14 +220,16 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yGr-3o-rTX"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3qq-l9-44w">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2Z6-5d-tSs"/>
                         <segue destination="4NT-Lz-A09" kind="relationship" relationship="viewControllers" id="uQh-0w-1xD"/>
-                        <segue destination="DiH-4m-gea" kind="relationship" relationship="viewControllers" id="1jS-OZ-yIl"/>
-                        <segue destination="QNe-zN-dDi" kind="relationship" relationship="viewControllers" id="Dig-xW-eCf"/>
+                        <segue destination="TtG-Wm-m3m" kind="relationship" relationship="viewControllers" id="Qt8-2f-RZM"/>
+                        <segue destination="DiH-4m-gea" kind="relationship" relationship="viewControllers" id="hKX-sO-FIX"/>
+                        <segue destination="QNe-zN-dDi" kind="relationship" relationship="viewControllers" id="2W5-MT-kwe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJu-h0-SXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -328,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja4-QG-wbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="-588"/>
+            <point key="canvasLocation" x="2454" y="-607"/>
         </scene>
         <!--Heating Data-->
         <scene sceneID="9qu-lK-R3f">
@@ -360,10 +362,172 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tED-ua-XcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3229" y="-589"/>
+            <point key="canvasLocation" x="3229" y="-607"/>
+        </scene>
+        <!--Logistics Data-->
+        <scene sceneID="Lhp-0J-03s">
+            <objects>
+                <viewController title="Logistics Data" id="TtG-Wm-m3m" customClass="BusinessesViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nf2-t0-xEl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dm-tB-adR">
+                                <rect key="frame" x="82" y="713" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.35686274509803922" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="2UD-rc-Z3p"/>
+                                    <constraint firstAttribute="height" constant="50" id="nXG-5R-lJg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateEmission:" destination="TtG-Wm-m3m" eventType="touchUpInside" id="Jkn-Ez-goB"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1J2-ws-Rv3">
+                                <rect key="frame" x="40" y="348" width="334" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="73m-kM-trP"/>
+                                </constraints>
+                            </pickerView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in all Fields!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hED-0p-3zI">
+                                <rect key="frame" x="82" y="620" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="GPb-h7-Jgp"/>
+                                    <constraint firstAttribute="height" constant="50" id="Qe1-wz-nKb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="czx-hO-Tgl">
+                                <rect key="frame" x="82" y="178" width="250" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles Driven (Truck)..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-yD-CZo">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="truckTripChange:" destination="TtG-Wm-m3m" eventType="editingDidEnd" id="TRa-c8-F2Y"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles Flown (Airplane)..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjv-1F-BxF">
+                                        <rect key="frame" x="0.0" y="70" width="250" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="airplaneTripChange:" destination="TtG-Wm-m3m" eventType="editingDidEnd" id="Mu1-dl-JO3"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="1sj-ly-ruq"/>
+                                    <constraint firstAttribute="width" constant="250" id="e1S-jT-uEW"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6m-gp-saZ">
+                                <rect key="frame" x="82" y="118" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.35686274509999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Oe-2N-b95"/>
+                                    <constraint firstAttribute="width" constant="250" id="yd0-2D-e2K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Stop Editing">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopEditPress:" destination="TtG-Wm-m3m" eventType="touchUpInside" id="oGw-Bd-jzw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ehg-fi-OKJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ehg-fi-OKJ" firstAttribute="bottom" secondItem="2Dm-tB-adR" secondAttribute="bottom" constant="50" id="3Ez-rF-xQ4"/>
+                            <constraint firstItem="hED-0p-3zI" firstAttribute="top" secondItem="1J2-ws-Rv3" secondAttribute="bottom" constant="72" id="94w-rX-bXV"/>
+                            <constraint firstItem="hED-0p-3zI" firstAttribute="centerX" secondItem="Nf2-t0-xEl" secondAttribute="centerX" id="9sO-dd-2CI"/>
+                            <constraint firstItem="1J2-ws-Rv3" firstAttribute="top" secondItem="czx-hO-Tgl" secondAttribute="bottom" constant="50" id="EvW-ao-hYc"/>
+                            <constraint firstItem="1J2-ws-Rv3" firstAttribute="leading" secondItem="ehg-fi-OKJ" secondAttribute="leading" constant="40" id="HFm-aE-YSi"/>
+                            <constraint firstItem="N6m-gp-saZ" firstAttribute="centerX" secondItem="Nf2-t0-xEl" secondAttribute="centerX" id="NwW-jG-bHB"/>
+                            <constraint firstItem="ehg-fi-OKJ" firstAttribute="trailing" secondItem="1J2-ws-Rv3" secondAttribute="trailing" constant="40" id="Xp6-hP-hrn"/>
+                            <constraint firstItem="czx-hO-Tgl" firstAttribute="centerX" secondItem="Nf2-t0-xEl" secondAttribute="centerX" id="ctx-ao-rGM"/>
+                            <constraint firstItem="2Dm-tB-adR" firstAttribute="centerX" secondItem="Nf2-t0-xEl" secondAttribute="centerX" id="hRX-hq-Tvq"/>
+                            <constraint firstItem="czx-hO-Tgl" firstAttribute="top" secondItem="N6m-gp-saZ" secondAttribute="bottom" constant="10" id="j37-XY-Lwa"/>
+                            <constraint firstItem="1J2-ws-Rv3" firstAttribute="centerY" secondItem="Nf2-t0-xEl" secondAttribute="centerY" id="poj-6y-LUo"/>
+                            <constraint firstItem="1J2-ws-Rv3" firstAttribute="centerX" secondItem="Nf2-t0-xEl" secondAttribute="centerX" id="x1s-ih-rqX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Logistics" image="airplane.circle.fill" catalog="system" id="Lex-Hc-kgf"/>
+                    <connections>
+                        <outlet property="airplaneField" destination="Vjv-1F-BxF" id="p3s-Ls-ds2"/>
+                        <outlet property="calcButton" destination="2Dm-tB-adR" id="QDL-C8-pXx"/>
+                        <outlet property="errLabel" destination="hED-0p-3zI" id="nS5-3f-EXb"/>
+                        <outlet property="stopEditing" destination="N6m-gp-saZ" id="xJ3-ZS-mi7"/>
+                        <outlet property="truckField" destination="Yxd-yD-CZo" id="QCC-g6-z3I"/>
+                        <outlet property="truckPicker" destination="1J2-ws-Rv3" id="QPg-oI-4fU"/>
+                        <segue destination="VM4-iZ-285" kind="show" identifier="CalcBusiness" id="pC0-cp-GbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4i-SS-jtL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="-587"/>
+        </scene>
+        <!--Logistics-->
+        <scene sceneID="BL9-xN-6po">
+            <objects>
+                <viewController title="Logistics" id="VM4-iZ-285" customClass="BusiCalcViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="COc-Dw-8n5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Bu-ci-gHA">
+                                <rect key="frame" x="10" y="348" width="394" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-uk-Ril">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="95"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHw-sp-E8f">
+                                        <rect key="frame" x="0.0" y="105" width="394" height="95"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Wrm-pP-nrb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DAS-UP-tIq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DAS-UP-tIq" firstAttribute="trailing" secondItem="4Bu-ci-gHA" secondAttribute="trailing" constant="10" id="G0b-MF-FDW"/>
+                            <constraint firstItem="4Bu-ci-gHA" firstAttribute="leading" secondItem="DAS-UP-tIq" secondAttribute="leading" constant="10" id="SHW-IW-C7u"/>
+                            <constraint firstItem="4Bu-ci-gHA" firstAttribute="centerY" secondItem="COc-Dw-8n5" secondAttribute="centerY" id="V9N-75-eDd"/>
+                            <constraint firstItem="4Bu-ci-gHA" firstAttribute="centerX" secondItem="COc-Dw-8n5" secondAttribute="centerX" id="rj9-gR-4GA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Businesses" image="airplane.circle.fill" catalog="system" id="e4v-dN-cUW"/>
+                    <navigationItem key="navigationItem" title="Logistics Data" id="ELH-r3-PKD"/>
+                    <connections>
+                        <outlet property="planeEmission" destination="9wE-uk-Ril" id="guO-eu-Yzt"/>
+                        <outlet property="truckEmission" destination="lHw-sp-E8f" id="8CC-UB-0CC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSu-Dv-JjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="-1324"/>
         </scene>
     </scenes>
     <resources>
+        <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="info" catalog="system" width="93" height="128"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
