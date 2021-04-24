@@ -460,6 +460,15 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possible savings when you RECYCLE: GLASS, METAL, PLASTIC, NEWSPAPERS, and MAGAZINES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flw-qf-txt">
+                                <rect key="frame" x="10" y="160.5" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="gE5-ih-ZBH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="apT-Kz-aW2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -468,8 +477,12 @@
                             <constraint firstItem="hNP-E0-lBA" firstAttribute="centerX" secondItem="bLX-xr-Agg" secondAttribute="centerX" id="32T-ur-tbv"/>
                             <constraint firstItem="XvD-oO-7ra" firstAttribute="centerX" secondItem="bLX-xr-Agg" secondAttribute="centerX" id="557-pG-Ilb"/>
                             <constraint firstItem="XvD-oO-7ra" firstAttribute="centerY" secondItem="bLX-xr-Agg" secondAttribute="centerY" id="6oz-NP-5kA"/>
+                            <constraint firstItem="apT-Kz-aW2" firstAttribute="trailing" secondItem="flw-qf-txt" secondAttribute="trailing" constant="10" id="MeM-4A-avc"/>
+                            <constraint firstItem="flw-qf-txt" firstAttribute="leading" secondItem="apT-Kz-aW2" secondAttribute="leading" constant="10" id="VMK-fy-sTu"/>
+                            <constraint firstItem="XvD-oO-7ra" firstAttribute="top" secondItem="flw-qf-txt" secondAttribute="bottom" constant="50" id="g63-64-8Yy"/>
                             <constraint firstItem="3J2-Zt-pPw" firstAttribute="top" secondItem="XvD-oO-7ra" secondAttribute="bottom" constant="50" id="nCf-P4-8L7"/>
                             <constraint firstItem="3J2-Zt-pPw" firstAttribute="centerX" secondItem="bLX-xr-Agg" secondAttribute="centerX" id="ntc-nY-dv6"/>
+                            <constraint firstItem="flw-qf-txt" firstAttribute="centerX" secondItem="bLX-xr-Agg" secondAttribute="centerX" id="w1i-si-zMy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Possible Savings" image="house.fill" catalog="system" id="YEy-mK-FHP"/>
