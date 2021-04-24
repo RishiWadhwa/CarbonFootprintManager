@@ -9,7 +9,7 @@ import Foundation
 
 class avoidSpending {
     //num people in household
-    static var numPPL: Double = 0
+    var numPPL: Double = 0
     
     //waste savings by recycling
     static var METAL_SAVINGS = 89.38
@@ -18,12 +18,12 @@ class avoidSpending {
     static var MAGAZINE_SAVINGS = 27.46
     static var NEWSPAPER_SAVINGS = 113.14
     
-    public static func avoidSpending(_ numPeople: Double) {
+    init(_ numPeople: Double) {
         numPPL = numPeople
     }
     
-    static func calcReducing() -> Double{
-        let savingsPerPerson = METAL_SAVINGS + PLASTIC_SAVINGS + GLASS_SAVINGS + MAGAZINE_SAVINGS + NEWSPAPER_SAVINGS
+    func calcReducing() -> Double{
+        let savingsPerPerson = CarbonFootprintManager.avoidSpending.METAL_SAVINGS + CarbonFootprintManager.avoidSpending.PLASTIC_SAVINGS + CarbonFootprintManager.avoidSpending.GLASS_SAVINGS + CarbonFootprintManager.avoidSpending.MAGAZINE_SAVINGS + CarbonFootprintManager.avoidSpending.NEWSPAPER_SAVINGS
         
         let totalSavings = savingsPerPerson * numPPL
         

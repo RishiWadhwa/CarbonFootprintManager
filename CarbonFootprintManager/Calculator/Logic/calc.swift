@@ -37,10 +37,14 @@ class calc {
     //waste emissions
     static var WASTE_EMISSIONS_YEARLY = 692
     
+    static var PHONE_EMISSION_YEARLY = 315.0*2.205 + 22.0*2.205
+    
     //household variables
     var number_people: Double = 0
     var main_used = 0 // 0 - unset, 1 - electric, 2 - fuel oil, 3 - natural gas, 4 - propane
     var drivers_house: Double = 0
+    
+    var num_phones = 0.0
     
     init(_ numPeople: Double, _ drivers: Double, _ state: String) {
         number_people = numPeople
@@ -49,6 +53,12 @@ class calc {
         let index = CarbonFootprintManager.calc.STATES_BY_NAME.firstIndex(of: state)
         
         cost_car_yearly = (CarbonFootprintManager.calc.COST_OF_GAS[index!] as Double) * CarbonFootprintManager.calc.CAR_GALLON_YEARLY
+    }
+    
+    init(_ numPeople: Double, _ mainHeating: Int, _ numPhones: Double) {
+        main_used = mainHeating
+        number_people = numPeople
+        num_phones = numPhones
     }
     
      func calcEmissionTotal() -> Double{
@@ -70,21 +80,23 @@ class calc {
         return emission_yearly
     }
     
-    func costTotal() -> Double{
-        var cost_yearly: Double = cost_car_yearly * drivers_house
+    func costHeat() -> Double{
+        var cost_yearly: Double = Double(CarbonFootprintManager.calc.WASTE_EMISSIONS_YEARLY) * number_people + CarbonFootprintManager.calc.PHONE_EMISSION_YEARLY * num_phones
         
         switch main_used {
         case 1:
-            cost_yearly += CarbonFootprintManager.calc.ELECTRIC_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.ELECTRIC_COST_YEARLY * number_people
         case 2:
-            cost_yearly += CarbonFootprintManager.calc.FUEL_OIL_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.FUEL_OIL_COST_YEARLY * number_people
         case 3:
-            cost_yearly += CarbonFootprintManager.calc.NATURAL_GAS_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.NATURAL_GAS_COST_YEARLY * number_people
         case 4:
-            cost_yearly += CarbonFootprintManager.calc.PROPANE_COST_YEARLY
+            cost_yearly += CarbonFootprintManager.calc.PROPANE_COST_YEARLY * number_people
         default:
             cost_yearly = 0.0
         }
+        
+        cost_yearly = Double(round(cost_yearly * 100.0)/100.0)
         
         return cost_yearly
     }

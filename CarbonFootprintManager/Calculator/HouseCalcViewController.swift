@@ -9,21 +9,18 @@ import UIKit
 
 class HouseCalcViewController: UIViewController {
 
+    @IBOutlet weak var field: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let emission = house.costHeat()
+        let trees = Int(round(emission*100/2000.0))/100
+        
+        if trees > 0 {
+            field.text = "Emissions:\n\(emission) CO2e lbs/year\nTrees Cut: \(trees) Trees"
+        } else {
+            field.text = "Emissions: \(emission) CO2e lbs/year/person\nTrees Cut: <1 Trees"
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -23,7 +23,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var ppl: Double = 0
     var cars: Double = 0
     
-    var currentState = ""
+    var currentState = "Alaska"
     
     var pplInt = 0
     var carInt = 0
