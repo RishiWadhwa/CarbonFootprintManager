@@ -9,6 +9,7 @@ v1.0 Basic Emissions
 - 5 Features Added:
   - Car Data: 
     - Logs car prices and emissions per year based on the state in the US where you live
+    - Also can calculate for Canadian Provinces and some territories (NW Terr., Yukon, and Nanavut)
   - Heating Data: 
     - Calculates your house prices based on primary heating source (propane, natural gas, fuel oil, or electric)
     - Calculates emissions of charging your phone(s) per year
