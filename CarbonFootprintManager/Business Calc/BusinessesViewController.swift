@@ -26,6 +26,12 @@ class BusinessesViewController: UIViewController, UIPickerViewDataSource, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Designers.styleTextField(airplaneField)
+        Designers.styleTextField(truckField)
+        
+        airplaneField.attributedPlaceholder = NSAttributedString(string: "Number of miles flown (AIRPLANE)...", attributes: [NSAttributedString.Key.foregroundColor:UIColor.darkGray])
+        truckField.attributedPlaceholder = NSAttributedString(string: "Number of miles driven (TRUCK)...", attributes: [NSAttributedString.Key.foregroundColor:UIColor.darkGray])
+        
         airplaneField.delegate = self
         truckField.delegate = self
         
@@ -53,8 +59,10 @@ class BusinessesViewController: UIViewController, UIPickerViewDataSource, UIPick
         return TruckCalc.TRUCK_TYPE.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return TruckCalc.TRUCK_TYPE[row]
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let string = NSAttributedString(string: "\(TruckCalc.TRUCK_TYPE[row])", attributes: [NSAttributedString.Key.font:UIFont(name: "AvenirNext-Bold", size: 18)!, NSAttributedString.Key.foregroundColor:UIColor.black])
+        
+        return string
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

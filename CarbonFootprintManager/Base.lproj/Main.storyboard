@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meK-j0-DrW">
-                                <rect key="frame" x="0.0" y="388" width="414" height="200"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meK-j0-DrW">
+                                <rect key="frame" x="0.0" y="398" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="9Rf-Ka-aNC"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="ENL-f1-fTg"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Please fill in all forms!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-d9-ak7">
-                                <rect key="frame" x="82" y="608" width="250" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in all forms!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-d9-ak7">
+                                <rect key="frame" x="82" y="618" width="250" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="W7T-Oo-OlA"/>
                                     <constraint firstAttribute="width" constant="250" id="oqr-cM-1MT"/>
@@ -34,13 +34,13 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Uz-dD-Ak1">
-                                <rect key="frame" x="82" y="223" width="250" height="75"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Uz-dD-Ak1">
+                                <rect key="frame" x="82" y="233" width="250" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Non-Electric Cars In Household: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQT-mK-ZgS">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sTv-cm-RUW">
@@ -54,13 +54,13 @@
                                     <constraint firstAttribute="width" constant="250" id="bqu-SF-5cz"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oTI-N7-Fd7">
-                                <rect key="frame" x="82" y="113" width="250" height="75"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oTI-N7-Fd7">
+                                <rect key="frame" x="82" y="123" width="250" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People In Household: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGc-Ax-M0m">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k4u-Py-kJQ">
@@ -74,18 +74,18 @@
                                     <constraint firstAttribute="width" constant="250" id="tfs-6L-5Kn"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Choose Your State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-sW-eN0">
-                                <rect key="frame" x="82" y="348" width="250" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your Location: Canada &amp; USA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-sW-eN0">
+                                <rect key="frame" x="32" y="358" width="350" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="WUZ-Z8-JlN"/>
+                                    <constraint firstAttribute="width" constant="350" id="WUZ-Z8-JlN"/>
                                     <constraint firstAttribute="height" constant="30" id="odL-uT-fe4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnx-q8-Cg1">
-                                <rect key="frame" x="82" y="713" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnx-q8-Cg1">
+                                <rect key="frame" x="82" y="723" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.35686274509999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="hmh-a5-HeY"/>
@@ -101,11 +101,12 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wmw-d9-ak7" firstAttribute="top" secondItem="meK-j0-DrW" secondAttribute="bottom" constant="20" id="5Hu-OU-4ye"/>
                             <constraint firstItem="3Uz-dD-Ak1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4K-uf-RMV"/>
                             <constraint firstItem="Ngg-sW-eN0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OHK-Vt-ALu"/>
+                            <constraint firstItem="meK-j0-DrW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="PMP-AA-o5f"/>
                             <constraint firstItem="lnx-q8-Cg1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QxX-IW-Nai"/>
                             <constraint firstItem="wmw-d9-ak7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aWJ-3U-fCN"/>
                             <constraint firstItem="meK-j0-DrW" firstAttribute="top" secondItem="Ngg-sW-eN0" secondAttribute="bottom" constant="10" id="fpj-nn-uOx"/>
@@ -151,7 +152,7 @@
                                             <constraint firstAttribute="height" constant="100" id="kbY-Ey-llQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This means..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sda-0b-W4z">
@@ -160,7 +161,7 @@
                                             <constraint firstAttribute="height" constant="100" id="vEG-JW-7EQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUb-BE-GxV">
@@ -169,7 +170,7 @@
                                             <constraint firstAttribute="height" constant="100" id="hw6-Im-aOQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -177,12 +178,22 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="YCM-zy-vGy"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asuming 11,398 miles a year, 276 gallons of gas a year and all prices are in USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h18-AP-r1f">
+                                <rect key="frame" x="10" y="138" width="394" height="100"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dfO-Tl-RHY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.94117647058823528" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="h18-AP-r1f" firstAttribute="top" secondItem="dfO-Tl-RHY" secondAttribute="top" constant="50" id="1vw-lJ-GVV"/>
+                            <constraint firstItem="dfO-Tl-RHY" firstAttribute="trailing" secondItem="h18-AP-r1f" secondAttribute="trailing" constant="10" id="9RE-3J-1jG"/>
+                            <constraint firstItem="LIC-E5-oG3" firstAttribute="top" secondItem="h18-AP-r1f" secondAttribute="bottom" constant="50" id="F08-8Q-fTz"/>
                             <constraint firstItem="LIC-E5-oG3" firstAttribute="leading" secondItem="dfO-Tl-RHY" secondAttribute="leading" constant="50" id="FFv-Cj-4DJ"/>
                             <constraint firstItem="LIC-E5-oG3" firstAttribute="centerY" secondItem="NvE-fh-7Jf" secondAttribute="centerY" id="SCe-Uc-LY0"/>
+                            <constraint firstItem="h18-AP-r1f" firstAttribute="leading" secondItem="dfO-Tl-RHY" secondAttribute="leading" constant="10" id="aq5-gi-SBn"/>
                             <constraint firstItem="LIC-E5-oG3" firstAttribute="centerX" secondItem="NvE-fh-7Jf" secondAttribute="centerX" id="eV2-aE-N8q"/>
                             <constraint firstItem="dfO-Tl-RHY" firstAttribute="trailing" secondItem="LIC-E5-oG3" secondAttribute="trailing" constant="50" id="r1z-T1-qYN"/>
                         </constraints>
@@ -261,7 +272,7 @@
                                     <constraint firstAttribute="width" constant="350" id="PZ5-n8-Mz0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-fY-WXi">
@@ -299,7 +310,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People In Household: 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFx-Jd-sus">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BGh-TA-KCb">
@@ -320,7 +331,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Phones In Household: 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="095-Ni-w4o">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QfD-pw-H9m">
@@ -339,7 +350,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DA8-f7-TlN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PhU-fY-WXi" firstAttribute="centerX" secondItem="yiX-VM-6df" secondAttribute="centerX" id="25f-53-dRM"/>
                             <constraint firstItem="Y2p-go-zBf" firstAttribute="centerX" secondItem="yiX-VM-6df" secondAttribute="centerX" id="7zN-dy-5LZ"/>
@@ -379,16 +390,15 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pa3-vv-HRq">
                                 <rect key="frame" x="10" y="98" width="394" height="705"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Of4-yK-Y5J"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Of4-yK-Y5J" firstAttribute="trailing" secondItem="Pa3-vv-HRq" secondAttribute="trailing" constant="10" id="Cqt-T2-Piv"/>
                             <constraint firstItem="Pa3-vv-HRq" firstAttribute="leading" secondItem="Of4-yK-Y5J" secondAttribute="leading" constant="10" id="EQj-lB-ytH"/>
@@ -416,10 +426,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XvD-oO-7ra">
                                 <rect key="frame" x="82" y="410.5" width="250" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People In Household: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VJ-cC-i2z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People In Household: 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VJ-cC-i2z">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YwH-ch-zRV">
@@ -466,12 +476,12 @@
                                     <constraint firstAttribute="height" constant="200" id="gE5-ih-ZBH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="apT-Kz-aW2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hNP-E0-lBA" firstAttribute="top" secondItem="3J2-Zt-pPw" secondAttribute="bottom" constant="30" id="0M6-OI-9dH"/>
                             <constraint firstItem="hNP-E0-lBA" firstAttribute="centerX" secondItem="bLX-xr-Agg" secondAttribute="centerX" id="32T-ur-tbv"/>
@@ -507,19 +517,18 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWG-Dh-AFA">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="9ic-Uq-43K"/>
                                     <constraint firstAttribute="height" constant="300" id="pmP-dd-8iS"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BDD-hT-9Wq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TWG-Dh-AFA" firstAttribute="centerY" secondItem="tgv-Qo-Wka" secondAttribute="centerY" id="UmC-Fm-Cfw"/>
                             <constraint firstItem="TWG-Dh-AFA" firstAttribute="centerX" secondItem="tgv-Qo-Wka" secondAttribute="centerX" id="cU0-s7-8PY"/>
@@ -578,6 +587,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles Driven (Truck)..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-yD-CZo">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
@@ -586,6 +596,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles Flown (Airplane)..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjv-1F-BxF">
                                         <rect key="frame" x="0.0" y="70" width="250" height="50"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
@@ -620,12 +631,12 @@
                                     <constraint firstAttribute="height" constant="30" id="eAe-PM-dgp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ehg-fi-OKJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2Dm-tB-adR" firstAttribute="top" secondItem="hED-0p-3zI" secondAttribute="bottom" constant="30" id="4KI-zr-sxy"/>
                             <constraint firstItem="qe6-Qb-aEb" firstAttribute="top" secondItem="czx-hO-Tgl" secondAttribute="bottom" constant="10" id="7Su-ty-72v"/>
@@ -672,13 +683,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-uk-Ril">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="95"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHw-sp-E8f">
                                         <rect key="frame" x="0.0" y="105" width="394" height="95"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -688,7 +699,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DAS-UP-tIq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DAS-UP-tIq" firstAttribute="trailing" secondItem="4Bu-ci-gHA" secondAttribute="trailing" constant="10" id="G0b-MF-FDW"/>
                             <constraint firstItem="4Bu-ci-gHA" firstAttribute="leading" secondItem="DAS-UP-tIq" secondAttribute="leading" constant="10" id="SHW-IW-C7u"/>
@@ -717,19 +728,18 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwj-qN-axb">
                                 <rect key="frame" x="32" y="298" width="350" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="S3a-oc-o2Q"/>
                                     <constraint firstAttribute="width" constant="350" id="SWf-Uw-kpC"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ire-Wh-ZCi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mwj-qN-axb" firstAttribute="centerY" secondItem="d4u-dH-HEd" secondAttribute="centerY" id="7IY-WN-KCa"/>
                             <constraint firstItem="mwj-qN-axb" firstAttribute="centerX" secondItem="d4u-dH-HEd" secondAttribute="centerX" id="Uvs-sg-ibJ"/>
@@ -752,12 +762,6 @@
         <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

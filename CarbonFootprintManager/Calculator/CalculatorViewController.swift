@@ -61,11 +61,13 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 51
+        return calc.STATES_BY_NAME.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return calc.STATES_BY_NAME[row]
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let string = NSAttributedString(string: "\(calc.STATES_BY_NAME[row])", attributes: [NSAttributedString.Key.font:UIFont(name: "AvenirNext-Bold", size: 18)!, NSAttributedString.Key.foregroundColor:UIColor.black])
+        
+        return string
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -93,7 +95,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     @IBAction func calcVal(_ sender: Any) {
-        if (currentState == "") {
+        if (currentState == "" || ppl <= 0 || cars <= 0) {
             errLabel.isHidden = false
             
             return

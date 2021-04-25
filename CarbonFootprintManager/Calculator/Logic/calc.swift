@@ -9,8 +9,8 @@ import Foundation
 
 class calc {
     //states and their gas prices
-    static let STATES_BY_NAME: [String] = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"]
-    static var COST_OF_GAS: [Double] = [3.23425, 2.93825, 2.973256, 3.275, 4.1195, 3.223, 3.159, 3.0135, 2.27325, 3.106, 3.008, 4.035, 3.0085, 3.289, 3.35925, 3.1395, 2.9665, 3.00825, 2.873, 3.01125, 3.11025, 3.07375, 3.09625, 2.9985, 2.90625, 2.847, 3.04925, 2.942, 3.007, 2.983, 2.98475, 3.16225, 3.152, 3.551, 3.1735, 3.057, 2.90425, 3.36225, 3.3105, 3.061, 2.8915, 3.04225, 2.997, 2.87775, 3.3275, 3.01025, 3.041, 3.5225, 3.0505, 3.04225, 3.16375]
+    static let STATES_BY_NAME: [String] = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming", "British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario", "Quebec", "Prince Edward Island", "Nova Scotia", "New Brunswick", "NewFoundland", "Labrador", "Yukon", "NW Territories", "Nunavut"]
+    static var COST_OF_GAS: [Double] = [3.23425, 2.93825, 2.973256, 3.275, 4.1195, 3.223, 3.159, 3.0135, 2.27325, 3.106, 3.008, 4.035, 3.0085, 3.289, 3.35925, 3.1395, 2.9665, 3.00825, 2.873, 3.01125, 3.11025, 3.07375, 3.09625, 2.9985, 2.90625, 2.847, 3.04925, 2.942, 3.007, 2.983, 2.98475, 3.16225, 3.152, 3.551, 3.1735, 3.057, 2.90425, 3.36225, 3.3105, 3.061, 2.8915, 3.04225, 2.997, 2.87775, 3.3275, 3.01025, 3.041, 3.5225, 3.0505, 3.04225, 3.16375, 4.375, 3.84, 3.95, 3.86, 4.16, 4.16, 4.16, 3.83, 3.71, 4.26, 4.26, 3.97, 4.12, 4.13]
 
     
     //emissions basic needs
@@ -50,7 +50,7 @@ class calc {
         number_people = numPeople
         drivers_house = drivers
         
-        let index = CarbonFootprintManager.calc.STATES_BY_NAME.firstIndex(of: state)
+        let index = CarbonFootprintManager.calc.STATES_BY_NAME.lastIndex(of: state)
         
         cost_car_yearly = (CarbonFootprintManager.calc.COST_OF_GAS[index!] as Double) * CarbonFootprintManager.calc.CAR_GALLON_YEARLY
     }
