@@ -33,6 +33,8 @@ class SavingsDataViewController: UIViewController {
     
     @IBAction func calcPress(_ sender: Any) {
         saving = avoidSpending.init(ppl)
+        
+        self.performSegue(withIdentifier: "calcSavings", sender: sender)
     }
 
 }

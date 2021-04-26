@@ -500,7 +500,7 @@
                         <outlet property="calcButton" destination="hNP-E0-lBA" id="fWm-mg-sbP"/>
                         <outlet property="pplLabel" destination="5VJ-cC-i2z" id="kif-I3-Egi"/>
                         <outlet property="pplStepper" destination="YwH-ch-zRV" id="DTl-nV-pSS"/>
-                        <segue destination="O8q-C9-qHX" kind="show" identifier="CalcSavings" id="N4x-hV-Bdj"/>
+                        <segue destination="O8q-C9-qHX" kind="show" identifier="calcSavings" id="N4x-hV-Bdj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja4-QG-wbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -697,11 +697,20 @@
                                     <constraint firstAttribute="height" constant="200" id="Wrm-pP-nrb"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treeTruck" translatesAutoresizingMaskIntoConstraints="NO" id="Al1-46-cYL">
+                                <rect key="frame" x="82" y="148" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="T6p-Mp-WCs"/>
+                                    <constraint firstAttribute="width" constant="250" id="vAx-cw-bMX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DAS-UP-tIq"/>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Al1-46-cYL" firstAttribute="centerX" secondItem="COc-Dw-8n5" secondAttribute="centerX" id="DEq-ck-Obt"/>
                             <constraint firstItem="DAS-UP-tIq" firstAttribute="trailing" secondItem="4Bu-ci-gHA" secondAttribute="trailing" constant="10" id="G0b-MF-FDW"/>
+                            <constraint firstItem="4Bu-ci-gHA" firstAttribute="top" secondItem="Al1-46-cYL" secondAttribute="bottom" constant="50" id="KJv-Tt-OmZ"/>
                             <constraint firstItem="4Bu-ci-gHA" firstAttribute="leading" secondItem="DAS-UP-tIq" secondAttribute="leading" constant="10" id="SHW-IW-C7u"/>
                             <constraint firstItem="4Bu-ci-gHA" firstAttribute="centerY" secondItem="COc-Dw-8n5" secondAttribute="centerY" id="V9N-75-eDd"/>
                             <constraint firstItem="4Bu-ci-gHA" firstAttribute="centerX" secondItem="COc-Dw-8n5" secondAttribute="centerX" id="rj9-gR-4GA"/>
@@ -762,6 +771,7 @@
         <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="treeTruck" width="683" height="288"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

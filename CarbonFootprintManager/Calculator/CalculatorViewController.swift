@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 var carCost: calc!
 class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -28,8 +29,21 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var pplInt = 0
     var carInt = 0
     
+    let center = UNUserNotificationCenter.current()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        center.requestAuthorization(options: [.alert,.sound, .badge]) { (bool, err) in
+            if !bool {
+                let alert = UIAlertController(title: "Disabled", message: "You can change this in settings anytime!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            } else {
+                let alert = UIAlertController(title: "Enabled", message: "Don't worry, this app sends a message every 3 days!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.callGranted()
+            }
+        }
         
         pplLabel.font = UIFont(name: "AvenirNext-Bold", size: 18)        
         carLabel.font = UIFont(name: "AvenirNext-Bold", size: 18)
@@ -48,6 +62,30 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         errLabel.isHidden = true
         
         styleButton()
+    }
+    
+    func callGranted() {
+        let content = UNMutableNotificationContent()
+        content.title = "Hey there!"
+        content.body = "It takes 5 seconds to check your carbon emission! (You can turn these off anytime!)"
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 8
+        dateComponents.minute = 55
+        
+        //let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 259200, repeats: true)
+        
+        let uidString = UUID().uuidString
+        let req = UNNotificationRequest(identifier: uidString, content: content, trigger: trigger)
+        
+        center.add(req) { (err) in
+            guard let error = err else {
+                return
+            }
+            
+            print(error.localizedDescription)
+        }
     }
     
     func styleButton() {
