@@ -18,6 +18,11 @@
 		5B978C882633B22300FE383C /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B978C872633B22300FE383C /* SavingsViewController.swift */; };
 		5B978C8D2633B31200FE383C /* SavingsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B978C8C2633B31200FE383C /* SavingsDataViewController.swift */; };
 		5B9D935126351CFE000A0EB1 /* Designers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D935026351CFE000A0EB1 /* Designers.swift */; };
+		5BAE6A2C2640A6C500B2324A /* HowSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE6A2B2640A6C500B2324A /* HowSaveViewController.swift */; };
+		5BAE6A312640AA5400B2324A /* MainSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE6A302640AA5400B2324A /* MainSaveViewController.swift */; };
+		5BAE6A362640B16C00B2324A /* DonationLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE6A352640B16C00B2324A /* DonationLocationViewController.swift */; };
+		5BAE6A3C2640B18700B2324A /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE6A3B2640B18700B2324A /* Information.swift */; };
+		5BAE6A412640B18F00B2324A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE6A402640B18F00B2324A /* Location.swift */; };
 		5BCCD18D262FDA78006616F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD18C262FDA78006616F7 /* AppDelegate.swift */; };
 		5BCCD18F262FDA78006616F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD18E262FDA78006616F7 /* SceneDelegate.swift */; };
 		5BCCD191262FDA78006616F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCCD190262FDA78006616F7 /* ViewController.swift */; };
@@ -62,6 +67,11 @@
 		5B978C8C2633B31200FE383C /* SavingsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsDataViewController.swift; sourceTree = "<group>"; };
 		5B9D935026351CFE000A0EB1 /* Designers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designers.swift; sourceTree = "<group>"; };
 		5B9D935526371429000A0EB1 /* CarbonFootprintManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CarbonFootprintManager.entitlements; sourceTree = "<group>"; };
+		5BAE6A2B2640A6C500B2324A /* HowSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowSaveViewController.swift; sourceTree = "<group>"; };
+		5BAE6A302640AA5400B2324A /* MainSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSaveViewController.swift; sourceTree = "<group>"; };
+		5BAE6A352640B16C00B2324A /* DonationLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationLocationViewController.swift; sourceTree = "<group>"; };
+		5BAE6A3B2640B18700B2324A /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		5BAE6A402640B18F00B2324A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5BCCD189262FDA78006616F7 /* CarbonFootprintManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonFootprintManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCCD18C262FDA78006616F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BCCD18E262FDA78006616F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,8 +147,12 @@
 		5B978C862633B20E00FE383C /* Savings */ = {
 			isa = PBXGroup;
 			children = (
+				5BAE6A3A2640B17200B2324A /* Donations Table */,
 				5B978C872633B22300FE383C /* SavingsViewController.swift */,
 				5B978C8C2633B31200FE383C /* SavingsDataViewController.swift */,
+				5BAE6A2B2640A6C500B2324A /* HowSaveViewController.swift */,
+				5BAE6A302640AA5400B2324A /* MainSaveViewController.swift */,
+				5BAE6A352640B16C00B2324A /* DonationLocationViewController.swift */,
 			);
 			path = Savings;
 			sourceTree = "<group>";
@@ -149,6 +163,15 @@
 				5B9D935026351CFE000A0EB1 /* Designers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BAE6A3A2640B17200B2324A /* Donations Table */ = {
+			isa = PBXGroup;
+			children = (
+				5BAE6A3B2640B18700B2324A /* Information.swift */,
+				5BAE6A402640B18F00B2324A /* Location.swift */,
+			);
+			path = "Donations Table";
 			sourceTree = "<group>";
 		};
 		5BCCD180262FDA78006616F7 = {
@@ -361,6 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAE6A3C2640B18700B2324A /* Information.swift in Sources */,
+				5BAE6A2C2640A6C500B2324A /* HowSaveViewController.swift in Sources */,
 				5B978C882633B22300FE383C /* SavingsViewController.swift in Sources */,
 				5BCCD1C5262FDC2C006616F7 /* CalculatorViewController.swift in Sources */,
 				5BCCD197262FDA78006616F7 /* CarbonFootprintManager.xcdatamodeld in Sources */,
@@ -368,16 +393,19 @@
 				5B978C7F2632539F00FE383C /* HouseCalcViewController.swift in Sources */,
 				5B46822A263245BC00A34E9D /* BusiCalcViewController.swift in Sources */,
 				5BCCD18D262FDA78006616F7 /* AppDelegate.swift in Sources */,
+				5BAE6A362640B16C00B2324A /* DonationLocationViewController.swift in Sources */,
 				5B978C8D2633B31200FE383C /* SavingsDataViewController.swift in Sources */,
 				5B4682182631D2E400A34E9D /* BusinessesViewController.swift in Sources */,
 				5B468211263128B800A34E9D /* ConstantsViewController.swift in Sources */,
 				5B4682252631D30300A34E9D /* TruckCalc.swift in Sources */,
+				5BAE6A412640B18F00B2324A /* Location.swift in Sources */,
 				5BCCD1CA262FDC36006616F7 /* calc.swift in Sources */,
 				5B978C7A2632539600FE383C /* HouseDataViewController.swift in Sources */,
 				5B4682202631D2F600A34E9D /* AirplaneCalc.swift in Sources */,
 				5BCCD1CF262FE01F006616F7 /* avoidSpending.swift in Sources */,
 				5B46820B2631118B00A34E9D /* CarCalcViewController.swift in Sources */,
 				5B9D935126351CFE000A0EB1 /* Designers.swift in Sources */,
+				5BAE6A312640AA5400B2324A /* MainSaveViewController.swift in Sources */,
 				5BCCD18F262FDA78006616F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

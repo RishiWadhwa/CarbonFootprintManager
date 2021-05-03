@@ -12,16 +12,17 @@
         <!--How Can I Save?-->
         <scene sceneID="48d-Wp-EfG">
             <objects>
-                <viewController id="ezY-IM-lN3" sceneMemberID="viewController">
+                <viewController id="ezY-IM-lN3" customClass="HowSaveViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="330-QR-SZh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qDn-q4-cLw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDn-q4-cLw">
                                 <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dKi-cI-L4F"/>
@@ -34,6 +35,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="How Can I Save?" id="Dxf-GO-wAr"/>
+                    <connections>
+                        <outlet property="field" destination="qDn-q4-cLw" id="BE0-Fe-BG1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTG-Vu-brL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +46,7 @@
         <!--Savings-->
         <scene sceneID="iUd-vO-BSs">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="hGV-wp-8aZ" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="hGV-wp-8aZ" customClass="MainSaveViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhS-m1-H2L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +109,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Savings" image="ellipsis" catalog="system" id="GNU-xH-1Fa"/>
+                    <connections>
+                        <outlet property="calculator" destination="fMr-h8-SCA" id="YOE-Dr-Fsv"/>
+                        <outlet property="donateLocation" destination="Jd4-ia-fXP" id="3m7-Bn-kdI"/>
+                        <outlet property="howTo" destination="JFh-Bf-sWE" id="xWU-PR-uTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8M-CF-RRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -869,7 +878,7 @@
         <!--Donation Locations-->
         <scene sceneID="tJg-6m-a3I">
             <objects>
-                <viewController id="bXE-2r-yox" sceneMemberID="viewController">
+                <viewController id="bXE-2r-yox" customClass="DonationLocationViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oAm-5F-VHU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -913,6 +922,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Donation Locations" id="BmY-U2-Eoc"/>
+                    <connections>
+                        <outlet property="table" destination="dfk-TA-N3z" id="2TE-Vw-1qb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGh-1n-L6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
