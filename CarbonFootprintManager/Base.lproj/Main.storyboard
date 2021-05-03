@@ -9,6 +9,107 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--How Can I Save?-->
+        <scene sceneID="48d-Wp-EfG">
+            <objects>
+                <viewController id="ezY-IM-lN3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="330-QR-SZh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qDn-q4-cLw">
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dKi-cI-L4F"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dKi-cI-L4F" firstAttribute="trailing" secondItem="qDn-q4-cLw" secondAttribute="trailing" constant="10" id="J7R-xR-j4y"/>
+                            <constraint firstItem="qDn-q4-cLw" firstAttribute="leading" secondItem="dKi-cI-L4F" secondAttribute="leading" constant="10" id="iff-7V-Bkd"/>
+                            <constraint firstItem="qDn-q4-cLw" firstAttribute="top" secondItem="dKi-cI-L4F" secondAttribute="top" constant="10" id="ozi-tO-vrQ"/>
+                            <constraint firstItem="dKi-cI-L4F" firstAttribute="bottom" secondItem="qDn-q4-cLw" secondAttribute="bottom" constant="10" id="qC0-wc-7yl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="How Can I Save?" id="Dxf-GO-wAr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTG-Vu-brL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="1573"/>
+        </scene>
+        <!--Savings-->
+        <scene sceneID="iUd-vO-BSs">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="hGV-wp-8aZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mhS-m1-H2L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMr-h8-SCA">
+                                <rect key="frame" x="32" y="323" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.35686274509999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="2ou-Dh-8ab"/>
+                                    <constraint firstAttribute="height" constant="50" id="dZR-JJ-kNB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Calculate Savings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DiH-4m-gea" kind="show" id="goJ-ov-S3F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFh-Bf-sWE">
+                                <rect key="frame" x="32" y="423" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.35686274509999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="IZu-sl-0mz"/>
+                                    <constraint firstAttribute="height" constant="50" id="QYi-k4-ExS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="How to Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ezY-IM-lN3" kind="show" id="xxL-gB-V79"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd4-ia-fXP">
+                                <rect key="frame" x="32" y="523" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.35686274509999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="7ai-8l-Rem"/>
+                                    <constraint firstAttribute="height" constant="50" id="bz4-Gy-YaD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Ways to Help By Donating">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bXE-2r-yox" kind="show" id="wTL-eR-nMM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rlf-kW-IQk"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JFh-Bf-sWE" firstAttribute="centerX" secondItem="mhS-m1-H2L" secondAttribute="centerX" id="0tu-ab-Hqi"/>
+                            <constraint firstItem="JFh-Bf-sWE" firstAttribute="centerY" secondItem="mhS-m1-H2L" secondAttribute="centerY" id="CeH-bV-0to"/>
+                            <constraint firstItem="Jd4-ia-fXP" firstAttribute="top" secondItem="JFh-Bf-sWE" secondAttribute="bottom" constant="50" id="TLK-N2-Ec1"/>
+                            <constraint firstItem="Jd4-ia-fXP" firstAttribute="centerX" secondItem="mhS-m1-H2L" secondAttribute="centerX" id="rMS-4B-3xr"/>
+                            <constraint firstItem="JFh-Bf-sWE" firstAttribute="top" secondItem="fMr-h8-SCA" secondAttribute="bottom" constant="50" id="xi4-dQ-b3s"/>
+                            <constraint firstItem="fMr-h8-SCA" firstAttribute="centerX" secondItem="mhS-m1-H2L" secondAttribute="centerX" id="zEa-Bk-RHJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Savings" image="ellipsis" catalog="system" id="GNU-xH-1Fa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8M-CF-RRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="846"/>
+        </scene>
         <!--Provide Data-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -242,8 +343,8 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2Z6-5d-tSs"/>
                         <segue destination="4NT-Lz-A09" kind="relationship" relationship="viewControllers" id="uQh-0w-1xD"/>
                         <segue destination="TtG-Wm-m3m" kind="relationship" relationship="viewControllers" id="Qt8-2f-RZM"/>
-                        <segue destination="DiH-4m-gea" kind="relationship" relationship="viewControllers" id="hKX-sO-FIX"/>
                         <segue destination="QNe-zN-dDi" kind="relationship" relationship="viewControllers" id="2W5-MT-kwe"/>
+                        <segue destination="hGV-wp-8aZ" kind="relationship" relationship="viewControllers" id="XLz-hI-UPj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJu-h0-SXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,7 +465,7 @@
                             <constraint firstItem="cts-mk-JTv" firstAttribute="top" secondItem="SkF-gi-h0B" secondAttribute="bottom" constant="10" id="yd4-Kk-2Ga"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Heating Data" image="flame.fill" catalog="system" id="20X-JH-P1U"/>
+                    <tabBarItem key="tabBarItem" title="Heating Data" image="thermometer.sun.fill" catalog="system" id="20X-JH-P1U"/>
                     <connections>
                         <outlet property="calcButton" destination="PhU-fY-WXi" id="YaZ-6Z-zXO"/>
                         <outlet property="errLabel" destination="Y2p-go-zBf" id="Faa-4d-l3E"/>
@@ -415,7 +516,7 @@
             </objects>
             <point key="canvasLocation" x="1581" y="-607"/>
         </scene>
-        <!--Possible Savings-->
+        <!--Savings Info-->
         <scene sceneID="6PJ-3f-Fxv">
             <objects>
                 <viewController id="DiH-4m-gea" customClass="SavingsDataViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
@@ -496,6 +597,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Possible Savings" image="house.fill" catalog="system" id="YEy-mK-FHP"/>
+                    <navigationItem key="navigationItem" title="Savings Info" id="VMy-vB-xq1"/>
                     <connections>
                         <outlet property="calcButton" destination="hNP-E0-lBA" id="fWm-mg-sbP"/>
                         <outlet property="pplLabel" destination="5VJ-cC-i2z" id="kif-I3-Egi"/>
@@ -764,14 +866,70 @@
             </objects>
             <point key="canvasLocation" x="3184" y="-607"/>
         </scene>
+        <!--Donation Locations-->
+        <scene sceneID="tJg-6m-a3I">
+            <objects>
+                <viewController id="bXE-2r-yox" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oAm-5F-VHU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4MR-5K-xKX">
+                                <rect key="frame" x="10" y="108" width="394" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="RB2-kT-DIs"/>
+                                    <constraint firstAttribute="height" constant="150" id="lgJ-QJ-WPk"/>
+                                </constraints>
+                                <string key="text">Many organizations out there work towards helping our community save carbon and plant trees to save our world. Here are a few: (Click an org to get some details!)</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-TA-N3z">
+                                <rect key="frame" x="10" y="268" width="394" height="584"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="2yQ-sF-twL">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2yQ-sF-twL" id="Bg0-yh-kI3">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aiD-Vb-0Md"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aiD-Vb-0Md" firstAttribute="trailing" secondItem="4MR-5K-xKX" secondAttribute="trailing" constant="10" id="7hZ-7P-KCa"/>
+                            <constraint firstItem="4MR-5K-xKX" firstAttribute="top" secondItem="aiD-Vb-0Md" secondAttribute="top" constant="20" id="8zK-3a-5cD"/>
+                            <constraint firstItem="aiD-Vb-0Md" firstAttribute="bottom" secondItem="dfk-TA-N3z" secondAttribute="bottom" constant="10" id="KgN-Ga-HwI"/>
+                            <constraint firstItem="aiD-Vb-0Md" firstAttribute="trailing" secondItem="dfk-TA-N3z" secondAttribute="trailing" constant="10" id="dIk-kk-8la"/>
+                            <constraint firstItem="dfk-TA-N3z" firstAttribute="leading" secondItem="aiD-Vb-0Md" secondAttribute="leading" constant="10" id="h9d-NS-Fmj"/>
+                            <constraint firstItem="dfk-TA-N3z" firstAttribute="top" secondItem="4MR-5K-xKX" secondAttribute="bottom" constant="10" id="nOP-nM-HL2"/>
+                            <constraint firstItem="4MR-5K-xKX" firstAttribute="leading" secondItem="aiD-Vb-0Md" secondAttribute="leading" constant="10" id="reA-2c-kFm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donation Locations" id="BmY-U2-Eoc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGh-1n-L6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="1573"/>
+        </scene>
     </scenes>
     <resources>
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
         <image name="car" catalog="system" width="128" height="93"/>
-        <image name="flame.fill" catalog="system" width="108" height="128"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
         <image name="treeTruck" width="683" height="288"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
