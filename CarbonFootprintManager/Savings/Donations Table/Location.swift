@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class Location {
+    static let DONOS = ["Team Trees", "My Personal Link - SellOut"]
+}
