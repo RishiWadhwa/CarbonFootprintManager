@@ -8,5 +8,5 @@
 import Foundation
 
 class Location {
-    static let DONOS = ["Team Trees", "My Personal Link - SellOut"]
+    static let DONOS = ["Team Trees", "One Tree Planted", "Climate Emergency Fund", "Clean Air Task Force", "Rainforest Coalition", "Rainforest Foundation", "My Personal Link - SellOut"]
 }
