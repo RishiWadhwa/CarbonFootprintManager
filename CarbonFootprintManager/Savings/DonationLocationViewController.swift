@@ -34,9 +34,20 @@ class DonationLocationViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        table.deselectRow(at: indexPath, animated: true)
+        
         indexPress = indexPath.row
         
         let alert = UIAlertController(title: "\(Location.DONOS[indexPress])", message: "\(Information.DONOS[indexPress])", preferredStyle: .actionSheet)
+        
+        let titleAttr = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 25)!]
+        let msgAttr = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 17)!]
+        
+        let title = NSAttributedString(string: "\(Location.DONOS[indexPress])", attributes: titleAttr)
+        let msg = NSAttributedString(string: "\(Information.DONOS[indexPress])", attributes: msgAttr)
+        
+        alert.setValue(title, forKey: "attributedTitle")
+        alert.setValue(msg, forKey: "attributedMessage")
         
         alert.addAction(UIAlertAction(title: "Go There!", style: .default, handler: { [self] (alert) in
             if Information.DONO_LINK[self.indexPress] != nil {
@@ -47,7 +58,9 @@ class DonationLocationViewController: UIViewController, UITableViewDelegate, UIT
             }
         }))
         
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Nevermind", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
