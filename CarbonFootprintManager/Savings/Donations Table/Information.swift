@@ -12,5 +12,5 @@ class Information {
     
     static let DONO_LINK = ["https://teamtrees.org/", "https://onetreeplanted.org/", "https://climateemergencyfund.org/", "https://www.catf.us/", "https://www.rainforestcoalition.org/", "https://rainforestfoundation.org/", "https://apprunner.web.app/"]
     
-    static let DONO_VERIFIED = [false, false, false, false, false, true, true]
+    static let DONO_VERIFIED = [false, true, false, false, false, true, true]
 }
