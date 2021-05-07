@@ -16,7 +16,7 @@ class Designers {
         
         bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
         
-        bottomLine.backgroundColor = #colorLiteral(red: 0.4060570598, green: 0.5721182823, blue: 0.6268360019, alpha: 1)
+        bottomLine.backgroundColor = #colorLiteral(red: 0.4078431373, green: 0.5725490196, blue: 0.6274509804, alpha: 1)
         
         // Remove border on text field
         textfield.borderStyle = .none

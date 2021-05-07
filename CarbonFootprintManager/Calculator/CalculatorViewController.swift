@@ -94,7 +94,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         content.title = "Hey there!"
         content.body = "It takes 5 seconds to check your carbon emission! Did you know, even donating a small fund to organizations worldwide can slow climate change and reduce carbon emissions. Tap here or open the app and head to 'Other Ways To Donate' in the Savings Tab to find some handpicked organizations!"
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 172800, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60*60*24*5), repeats: true)
         
         let uidString = UUID().uuidString
         let req = UNNotificationRequest(identifier: uidString, content: content, trigger: trigger)
