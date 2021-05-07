@@ -13,6 +13,7 @@
 		5B4682202631D2F600A34E9D /* AirplaneCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46821F2631D2F600A34E9D /* AirplaneCalc.swift */; };
 		5B4682252631D30300A34E9D /* TruckCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4682242631D30300A34E9D /* TruckCalc.swift */; };
 		5B46822A263245BC00A34E9D /* BusiCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B468229263245BC00A34E9D /* BusiCalcViewController.swift */; };
+		5B6EBC242644E738006AC832 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EBC232644E738006AC832 /* ConversionViewController.swift */; };
 		5B978C7A2632539600FE383C /* HouseDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B978C792632539600FE383C /* HouseDataViewController.swift */; };
 		5B978C7F2632539F00FE383C /* HouseCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B978C7E2632539F00FE383C /* HouseCalcViewController.swift */; };
 		5B978C882633B22300FE383C /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B978C872633B22300FE383C /* SavingsViewController.swift */; };
@@ -61,6 +62,7 @@
 		5B46821F2631D2F600A34E9D /* AirplaneCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneCalc.swift; sourceTree = "<group>"; };
 		5B4682242631D30300A34E9D /* TruckCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckCalc.swift; sourceTree = "<group>"; };
 		5B468229263245BC00A34E9D /* BusiCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusiCalcViewController.swift; sourceTree = "<group>"; };
+		5B6EBC232644E738006AC832 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		5B978C792632539600FE383C /* HouseDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDataViewController.swift; sourceTree = "<group>"; };
 		5B978C7E2632539F00FE383C /* HouseCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCalcViewController.swift; sourceTree = "<group>"; };
 		5B978C872633B22300FE383C /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				5BCCD19A262FDA79006616F7 /* LaunchScreen.storyboard */,
 				5BCCD19D262FDA79006616F7 /* Info.plist */,
 				5BCCD195262FDA78006616F7 /* CarbonFootprintManager.xcdatamodeld */,
+				5B6EBC232644E738006AC832 /* ConversionViewController.swift */,
 			);
 			path = CarbonFootprintManager;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				5B46820B2631118B00A34E9D /* CarCalcViewController.swift in Sources */,
 				5B9D935126351CFE000A0EB1 /* Designers.swift in Sources */,
 				5BAE6A312640AA5400B2324A /* MainSaveViewController.swift in Sources */,
+				5B6EBC242644E738006AC832 /* ConversionViewController.swift in Sources */,
 				5BCCD18F262FDA78006616F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

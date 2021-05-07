@@ -43,6 +43,77 @@
             </objects>
             <point key="canvasLocation" x="657" y="1573"/>
         </scene>
+        <!--Conversion-->
+        <scene sceneID="350-cE-jfA">
+            <objects>
+                <viewController id="Wu2-xU-QJs" customClass="ConversionViewController" customModule="CarbonFootprintManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b03-7j-5wX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Xd-SN-tPD">
+                                <rect key="frame" x="82" y="333" width="250" height="230"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMp-IN-DBO">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="X4G-mu-9K0"/>
+                                            <constraint firstAttribute="width" constant="250" id="onm-ZE-2iE"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIT-xX-axw">
+                                        <rect key="frame" x="0.0" y="65" width="250" height="50"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.35686274509999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fiv-RX-JJn"/>
+                                            <constraint firstAttribute="width" constant="250" id="vI4-ET-rPv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <state key="normal" title="Reverse">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reverseConversion:" destination="Wu2-xU-QJs" eventType="touchUpInside" id="ff2-2o-ETh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metric Tonnes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4H-Yv-BED">
+                                        <rect key="frame" x="0.0" y="130" width="250" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="0xr-E9-PLT"/>
+                                            <constraint firstAttribute="width" constant="250" id="zSK-2P-gBq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1Ix-Py-EJg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xaa-PK-Vmb"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Xd-SN-tPD" firstAttribute="centerX" secondItem="b03-7j-5wX" secondAttribute="centerX" id="QTM-PJ-f9h"/>
+                            <constraint firstItem="5Xd-SN-tPD" firstAttribute="centerY" secondItem="b03-7j-5wX" secondAttribute="centerY" id="QVy-EM-10k"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Conversion" image="dollarsign.circle.fill" catalog="system" id="8zQ-MN-dIo"/>
+                    <connections>
+                        <outlet property="button" destination="eIT-xX-axw" id="Sqn-cX-3Y2"/>
+                        <outlet property="field" destination="fMp-IN-DBO" id="V3F-7Z-T3A"/>
+                        <outlet property="label" destination="b4H-Yv-BED" id="Hyi-MT-VQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGD-CC-G7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="846"/>
+        </scene>
         <!--Savings-->
         <scene sceneID="iUd-vO-BSs">
             <objects>
@@ -353,7 +424,7 @@
                         <segue destination="4NT-Lz-A09" kind="relationship" relationship="viewControllers" id="uQh-0w-1xD"/>
                         <segue destination="hGV-wp-8aZ" kind="relationship" relationship="viewControllers" id="XLz-hI-UPj"/>
                         <segue destination="TtG-Wm-m3m" kind="relationship" relationship="viewControllers" id="LuZ-dk-cNH"/>
-                        <segue destination="QNe-zN-dDi" kind="relationship" relationship="viewControllers" id="Vwa-Hx-fJC"/>
+                        <segue destination="Wu2-xU-QJs" kind="relationship" relationship="viewControllers" id="EvK-HM-O4P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJu-h0-SXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -499,7 +570,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pa3-vv-HRq">
-                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <rect key="frame" x="10" y="54" width="394" height="798"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
@@ -523,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Re3-vU-6Mr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="-607"/>
+            <point key="canvasLocation" x="1593" y="-1325"/>
         </scene>
         <!--Savings Info-->
         <scene sceneID="6PJ-3f-Fxv">
@@ -936,6 +1007,7 @@
     <resources>
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
         <image name="car" catalog="system" width="128" height="93"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
