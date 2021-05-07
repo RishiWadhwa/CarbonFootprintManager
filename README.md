@@ -45,3 +45,15 @@ v1.1 Saving Changes
     - Savings Document: Other ways to save (long document style formatting)
     - Savings by Donating Money List of Orgs: List of Orgs that take money and use it save the world (non-profits)!
   - Clean, smooth layout
+- Constants are removed from app 
+  - Where to find Constants:
+    - CarbonFootprintManager/main/Constants/ConstantsViewController.swift
+      - View Controller with the original UITextView on the Constants (deprecated - now removed)
+    - CarbonFootprintManager/main/Calculator/Logic/calc.swift
+      - Emission Constants
+    - CarbonFootprintManager/main/Calculator/Logic/avoidSpending.swift
+      - Saving Constants
+    - CarbonFootprintManager/main/Business Calc/Logic/AirplaneCalc.swift
+      - Business Airplane Constants
+    - CarbonFootprintManager/main/Business Calc/Logic/TruckCalc.swift
+      - Business Truck Constants
