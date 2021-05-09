@@ -38,10 +38,21 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             if !bool {
                 let alert = UIAlertController(title: "Disabled", message: "You can change this in settings anytime!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                
+                DispatchQueue.main.async {
+                    if !(self.isAppAlreadyLaunchedOnce())
+                    {self.present(alert, animated: true, completion: nil)}
+                }
             } else {
-                let alert = UIAlertController(title: "Enabled", message: "Don't worry, this app sends a message every 3 days!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.callGranted()
+                let alert = UIAlertController(title: "Enabled", message: "Don't worry, this app sends only ONE message every day!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (alert) in
+                    self.callGranted()
+                }))
+                
+                DispatchQueue.main.async {
+                    if !(self.isAppAlreadyLaunchedOnce())
+                    {self.present(alert, animated: true, completion: nil)}
+                }
             }
         }
         
@@ -64,17 +75,26 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         styleButton()
     }
     
+    func isAppAlreadyLaunchedOnce()->Bool{
+            let defaults = UserDefaults.standard
+
+            if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+                print("App already launched : \(isAppAlreadyLaunchedOnce)")
+                return true
+            }else{
+                defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+                print("App launched first time")
+                return false
+            }
+    }
+        
+    
     func callGranted() {
         let content = UNMutableNotificationContent()
         content.title = "Hey there!"
-        content.body = "It takes 5 seconds to check your carbon emission! (You can turn these off anytime!)"
+        content.body = "It takes 5 seconds to check your carbon emission! Did you know, even donating a small fund to organizations worldwide can slow climate change and reduce carbon emissions. Tap here or open the app and head to 'Other Ways To Donate' in the Savings Tab to find some handpicked organizations!"
         
-        var dateComponents = DateComponents()
-        dateComponents.hour = 8
-        dateComponents.minute = 55
-        
-        //let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 259200, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60*60*24*5), repeats: true)
         
         let uidString = UUID().uuidString
         let req = UNNotificationRequest(identifier: uidString, content: content, trigger: trigger)
