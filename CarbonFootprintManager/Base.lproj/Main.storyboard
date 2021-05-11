@@ -987,15 +987,18 @@
                         <constraints>
                             <constraint firstItem="aiD-Vb-0Md" firstAttribute="trailing" secondItem="4MR-5K-xKX" secondAttribute="trailing" constant="10" id="7hZ-7P-KCa"/>
                             <constraint firstItem="4MR-5K-xKX" firstAttribute="top" secondItem="aiD-Vb-0Md" secondAttribute="top" constant="20" id="8zK-3a-5cD"/>
-                            <constraint firstItem="aiD-Vb-0Md" firstAttribute="bottom" secondItem="dfk-TA-N3z" secondAttribute="bottom" constant="-40" id="KgN-Ga-HwI"/>
                             <constraint firstItem="aiD-Vb-0Md" firstAttribute="trailing" secondItem="dfk-TA-N3z" secondAttribute="trailing" id="dIk-kk-8la"/>
+                            <constraint firstItem="aiD-Vb-0Md" firstAttribute="bottom" secondItem="dfk-TA-N3z" secondAttribute="bottom" constant="-40" id="gO9-Pu-Tt8"/>
                             <constraint firstItem="dfk-TA-N3z" firstAttribute="leading" secondItem="aiD-Vb-0Md" secondAttribute="leading" id="h9d-NS-Fmj"/>
                             <constraint firstItem="dfk-TA-N3z" firstAttribute="top" secondItem="4MR-5K-xKX" secondAttribute="bottom" id="nOP-nM-HL2"/>
                             <constraint firstItem="4MR-5K-xKX" firstAttribute="leading" secondItem="aiD-Vb-0Md" secondAttribute="leading" constant="10" id="reA-2c-kFm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Donation Locations" id="BmY-U2-Eoc"/>
+                    <navigationItem key="navigationItem" title="Donation Locations" id="BmY-U2-Eoc">
+                        <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="PyO-8T-Wk0"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="info" destination="PyO-8T-Wk0" id="98H-aW-kYC"/>
                         <outlet property="table" destination="dfk-TA-N3z" id="2TE-Vw-1qb"/>
                     </connections>
                 </viewController>

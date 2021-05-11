@@ -10,6 +10,7 @@ import UIKit
 class DonationLocationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var info: UIBarButtonItem!
     
     var indexPress = 0
     
@@ -59,6 +60,7 @@ class DonationLocationViewController: UIViewController, UITableViewDelegate, UIT
         }))
         
         alert.addAction(UIAlertAction(title: "Nevermind", style: .cancel, handler: nil))
+        alert.popoverPresentationController?.barButtonItem = info
         
         self.present(alert, animated: true, completion: nil)
     }
