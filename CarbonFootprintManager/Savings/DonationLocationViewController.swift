@@ -60,7 +60,7 @@ class DonationLocationViewController: UIViewController, UITableViewDelegate, UIT
         }))
         
         alert.addAction(UIAlertAction(title: "Nevermind", style: .cancel, handler: nil))
-        alert.popoverPresentationController?.barButtonItem = info 
+        alert.popoverPresentationController?.barButtonItem = info
         
         self.present(alert, animated: true, completion: nil)
     }
