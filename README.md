@@ -57,3 +57,10 @@ v1.1 Saving Changes
       - Business Airplane Constants
     - CarbonFootprintManager/main/Business Calc/Logic/TruckCalc.swift
       - Business Truck Constants
+
+v1.1.1 Bug Fixes
+- Reported Bug(s):
+  - Resizing Bug
+  - Glitches in size on smaller phones (XS, iPhone 8 or lower, etc)
+- Fixed!
+  -  Do Report more of these bugs! Thank you!
