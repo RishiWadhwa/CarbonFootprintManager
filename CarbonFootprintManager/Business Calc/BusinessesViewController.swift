@@ -17,7 +17,6 @@ class BusinessesViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var airplaneField: UITextField!
     @IBOutlet weak var truckField: UITextField!
     @IBOutlet weak var errLabel: UILabel!
-    @IBOutlet weak var stopEditing: UIButton!
     
     var truckModel = "Grumans LLV / Standard / Don't know"
     var airplaneTrips = 0.0
@@ -39,12 +38,28 @@ class BusinessesViewController: UIViewController, UIPickerViewDataSource, UIPick
         truckPicker.dataSource = self
         
         calcButton.layer.cornerRadius = 25
-        stopEditing.layer.cornerRadius = 25
         
         let myFont = UIFont(name: "AvenirNext-Bold", size: 19)
         
         truckField.font = myFont
         airplaneField.font = myFont
+        
+        truckField.addDoneCancelToolbar(onDone: (target: self, action: #selector(self.tapDone)), onCancel: (target: self, action: #selector(self.tapCancel)))
+        airplaneField.addDoneCancelToolbar(onDone: (target: self, action: #selector(self.tapDone)), onCancel: (target: self, action: #selector(self.tapCancel)))
+    }
+    
+    @objc func tapDone() {
+        print("Done!")
+        
+        truckField.resignFirstResponder()
+        airplaneField.resignFirstResponder()
+    }
+    
+    @objc func tapCancel() {
+        print("Cancelled!")
+        
+        truckField.resignFirstResponder()
+        airplaneField.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -87,10 +102,5 @@ class BusinessesViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     @IBAction func truckTripChange(_ sender: Any) {
         truckTrips = Double(Int(truckField.text ?? "0") ?? 0)
-    }
-    
-    @IBAction func stopEditPress(_ sender: Any) {
-        truckField.resignFirstResponder()
-        airplaneField.resignFirstResponder()
     }
 }

@@ -11,7 +11,6 @@ import UserNotifications
 var carCost: calc!
 class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var errLabel: UILabel!
     @IBOutlet weak var pplLabel: UILabel!
     @IBOutlet weak var carLabel: UILabel!
     @IBOutlet weak var calcButton: UIButton!
@@ -69,8 +68,6 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         updatePpl()
         updateCar()
-        
-        errLabel.isHidden = true
         
         styleButton()
     }
@@ -153,11 +150,6 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     @IBAction func calcVal(_ sender: Any) {
-        if (currentState == "" || ppl <= 0 || cars <= 0) {
-            errLabel.isHidden = false
-            
-            return
-        }
         
         carCost = calc.init(ppl, cars, currentState)
         self.performSegue(withIdentifier: "CalcCar", sender: sender)
